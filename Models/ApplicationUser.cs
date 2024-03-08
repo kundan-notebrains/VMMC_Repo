@@ -3,7 +3,7 @@ using VMMC.Models.CommanModeles;
 
 namespace VMMC.Models;
 
-public partial class ApplicationUser: RolesDetails
+public partial class ApplicationUser
 {
     public int Id { get; set; }
 

@@ -102,16 +102,16 @@ namespace VMMC.Services
             
         }
       
-        public async Task<List<ApplicationUser>> ApplicationUserDetails()
+        public async Task<List<RolesDetails>> ApplicationUserDetails()
         {
 
-            var data = await _context.ApplicationUsers.FromSqlRaw($"exec usp_application_Details").ToListAsync();
+            var data = await _context.RolesDetails.FromSqlRaw($"exec usp_application_Details").ToListAsync();            
 
             return data!;
         }
-        public async Task<List<ApplicationUser>> ApplicationUserEdit(int id)
+        public async Task<List<RolesDetails>> ApplicationUserEdit(int id)
         {                   
-            var data = await _context.ApplicationUsers.FromSqlRaw($"exec usp_applicationuser_edit '{id}'").ToListAsync();            
+            var data = await _context.RolesDetails.FromSqlRaw($"exec usp_applicationuser_edit '{id}'").ToListAsync();            
             return data!;
         }
         public async Task<bool> ApplicationUserDelete(int id)

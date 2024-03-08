@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using VMMC.Models.CommanModeles;
 
 namespace VMMC.Models;
 
@@ -18,7 +19,7 @@ public partial class VmmcContext : DbContext
     public virtual DbSet<AccessLevel> AccessLevels { get; set; }
 
     public virtual DbSet<ApplicationUser> ApplicationUsers { get; set; }
-
+    public DbSet<RolesDetails> RolesDetails {  get; set; }
     public virtual DbSet<ManageClientDetailsPatient> ManageClientDetailsPatients { get; set; }
 
     public virtual DbSet<Module> Modules { get; set; }

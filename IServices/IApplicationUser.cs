@@ -7,13 +7,12 @@ namespace VMMC.IServices
     {
         #region USER MODULES
         Task<bool> AddUpdateUser(Users _user);
-        Task<List<ApplicationUser>> ApplicationUserDetails();
-        Task<List<ApplicationUser>> ApplicationUserEdit(int id);
+        Task<List<RolesDetails>> ApplicationUserDetails();
+        Task<List<RolesDetails>> ApplicationUserEdit(int id);
         Task<bool> ApplicationUserDelete(int id);
         Task<List<Module>> ModulesList();
         Task<UserID> Password();
         #endregion
-        #region LOGIN SYSTEM
-        #endregion
+       
     }
 }
