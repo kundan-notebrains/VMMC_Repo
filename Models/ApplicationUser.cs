@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿
+using VMMC.Models.CommanModeles;
 
 namespace VMMC.Models;
 
-public partial class ApplicationUser
+public partial class ApplicationUser: RolesDetails
 {
     public int Id { get; set; }
 
@@ -35,5 +35,5 @@ public partial class ApplicationUser
 
     public DateTime? Updateddate { get; set; }
 
-    public string? Token { get; set; }
+    public string? Token { get; set; } = null;
 }
